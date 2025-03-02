@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Netflix GPT
+- create react app
+- configured TailwindCss
+
+# Features 
+- Login/Sign Up 
+    - Sign In /Sign Up form
+    - Redirect to Home page
+- Browse
+    - Header
+    - Main Movie
+        - Trailer in Background
+        - Title and Description
+        - Movie Suggestion
+
+- NetflixGPT
+    - Search Bar
+    - Movie Suggestions
+    
+
