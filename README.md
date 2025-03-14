@@ -78,6 +78,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Login form
 - Sign up form 
 - Form Validation
+- useRef Hook
+- Firebase Setup
+- Deploy app to production
+- Create Signuu User account
+- Implement Sign In user Api 
+- Created Redux store with user slice
+- implementd Sign out 
+- updated Profile
+
+
 
 # Features 
 - Login/Sign Up 
