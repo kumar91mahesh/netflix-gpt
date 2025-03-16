@@ -86,6 +86,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Created Redux store with user slice
 - implementd Sign out 
 - updated Profile
+- resigter tmdb api  and create and app and accced token
+- Custom hook for No playing 
+- Planning for main and secondary container
+- Fetch data for trailer and update store 
+- Embedded youtube video
 
 
 
