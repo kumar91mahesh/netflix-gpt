@@ -91,6 +91,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Planning for main and secondary container
 - Fetch data for trailer and update store 
 - Embedded youtube video
+- Build Secondary component 
+- Build Movie List 
+- Build Movie Card
+- TMDB image CDn URL
+- usePopularMovies custom hooks
 
 
 
