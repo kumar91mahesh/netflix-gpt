@@ -96,6 +96,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Build Movie Card
 - TMDB image CDn URL
 - usePopularMovies custom hooks
+- GPT serach Feature
 
 
 

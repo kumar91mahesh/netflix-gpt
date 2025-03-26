@@ -31,6 +31,10 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
+  const handleGptSearchClick = () => {
+    // navigate("/gpt-search");
+  }
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black to-transparent z-10 flex justify-between">
       <img
@@ -40,6 +44,7 @@ const Header = () => {
       />
       {user && (
         <div className="flex items-center space-x-4">
+          <button onClick={handleGptSearchClick} className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg">GPT Search</button>
           <img
             className="w-8"
             src={
