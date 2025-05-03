@@ -5,10 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
 import { toggleGptSearchView } from "../utils/gptSlice";
-import { LOGO } from "../utils/constants";
+import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
+import { changeLanguage } from "../utils/configSlice";
 const Header = () => {
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.user);
+  const showGptSearch = useSelector((state) => state.gpt.showGptSearch);
   const dispatch = useDispatch();
   const handleSignOut = () => {
     signOut(auth)
@@ -34,18 +36,36 @@ const Header = () => {
 
   const handleGptSearchClick = () => {
     dispatch(toggleGptSearchView());
-  }
+  };
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+    dispatch(changeLanguage(selectedLanguage));
+  };
 
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black to-transparent z-10 flex justify-between">
-      <img
-        className="w-44"
-        src={LOGO}
-        alt="logo"
-      />
+      <img className="w-44" src={LOGO} alt="logo" />
       {user && (
         <div className="flex items-center space-x-4">
-          <button onClick={handleGptSearchClick} className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg">GPT Search</button>
+          {showGptSearch && (
+            <select
+              className="bg-gray-800 text-white rounded-lg p-2"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((language) => (
+                <option key={language.identifier} value={language.identifier}>
+                  {language.name}
+                </option>
+              ))}
+            </select>
+          )}
+          <button
+            onClick={handleGptSearchClick}
+            className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg"
+          >
+            {showGptSearch ? "Home Page" : "GPT Search"}
+          </button>
           <img
             className="w-8"
             src={
